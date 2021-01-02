@@ -10,7 +10,7 @@
         <parameter name="deviceName" value="iPhone6sFromTestNGParam"/>
         <parameter name="udid" value="417a4a9981685bcc05e15d32c5d76879807fe62b"/>
         <parameter name="wdaLocalPort" value="10002" />
-        <parameter name="webkitDebugProxyPort" value="11002" />
+        <parameter name="webkitDebugProxyPort" value="11003" />
         <classes>
             <class name="iosTests.LoginTest"/>
         </classes>
@@ -24,7 +24,7 @@
         <parameter name="deviceName" value="iSim8FromTestNGParam"/>
         <parameter name="udid" value="57D62164-6520-40F0-90D2-213F27B77F4F"/>
         <parameter name="wdaLocalPort" value="10003" />
-        <parameter name="webkitDebugProxyPort" value="11003" />
+        <parameter name="webkitDebugProxyPort" value="11004" />
         <classes>
             <class name="iosTests.LoginTest"/>
         </classes>

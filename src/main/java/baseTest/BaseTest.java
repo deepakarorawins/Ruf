@@ -1,19 +1,34 @@
 package baseTest;
 
+import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.apache.logging.log4j.ThreadContext;
+import org.testng.ITestResult;
 import org.testng.annotations.*;
-import utils.DriverManager;
-import utils.GlobalParams;
-import utils.ServerManager;
-import utils.VideoManager;
+import utils.*;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Properties;
 //mvn test -DplatformName=ios -DdeviceName=iPhone6s -Dmaven.surefire.debug
 //mvn test -DplatformName=ios -DdeviceName=iPhone6s
 
 @Listeners(listeners.DeeListeners.class)
 public class BaseTest {
     GlobalParams params = new GlobalParams();
+
+
+    protected static ThreadLocal <AppiumDriver> driver = new ThreadLocal<AppiumDriver>();
+    protected static ThreadLocal <Properties> props = new ThreadLocal<Properties>();
+    protected static ThreadLocal <HashMap<String, String>> strings = new ThreadLocal<HashMap<String, String>>();
+    protected static ThreadLocal <String> platform = new ThreadLocal<String>();
+    protected static ThreadLocal <String> dateTime = new ThreadLocal<String>();
+    protected static ThreadLocal <String> deviceName = new ThreadLocal<String>();
+    private static AppiumDriverLocalService server;
+    TestUtils utils = new TestUtils();
+
+
 
 
     @BeforeSuite
@@ -59,6 +74,7 @@ public class BaseTest {
     public void beforeTest(){
         System.out.println("@BeforeTest");
 
+
     }
 
     @AfterTest
@@ -77,11 +93,15 @@ public class BaseTest {
     }
 
     @AfterMethod
-    public synchronized void afterMethod(){
+    public synchronized void afterMethod(ITestResult result){
         System.out.println("@AfterMethod");
+        String dirPath = "videos" + File.separator + params.getPlatformName() + "_" + params.getDeviceName()
+                + File.separator + utils.dateTime() + File.separator + result.getTestClass().getRealClass().getSimpleName();
+
+        File videoDir = new File(dirPath);
 
         try {
-            new VideoManager().stopRecording("ScenarioName");
+            new VideoManager().stopRecording(result.getName());
         } catch (IOException e) {
             e.printStackTrace();
         }
