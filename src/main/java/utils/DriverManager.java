@@ -18,7 +18,7 @@ public class DriverManager {
         driver.set(driver2);
     }
 
-    public void initializeDriver() throws Exception {
+    public ThreadLocal<AppiumDriver> initializeDriver() throws Exception {
         AppiumDriver driver = null;
         GlobalParams params = new GlobalParams();
         PropertyManager props = new PropertyManager();
@@ -46,6 +46,7 @@ public class DriverManager {
             }
         }
 
+        return this.driver;
     }
 
 }
