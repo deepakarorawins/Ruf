@@ -1,0 +1,622 @@
+{
+    "thresholds": {
+        "items": [{
+            "productId": 6,
+            "immediateThreshold": -25,
+            "candidateThreshold": -35
+        }, {
+            "productId": 7,
+            "immediateThreshold": -25,
+            "candidateThreshold": -35
+        }, {
+            "productId": 12,
+            "immediateThreshold": -25,
+            "candidateThreshold": -35
+        }, {
+            "productId": 13,
+            "immediateThreshold": -25,
+            "candidateThreshold": -35
+        }, {
+            "productId": 14,
+            "immediateThreshold": -25,
+            "candidateThreshold": -35
+        }, {
+            "productId": 15,
+            "immediateThreshold": -25,
+            "candidateThreshold": -35
+        }, {
+            "productId": 16,
+            "immediateThreshold": -30,
+            "candidateThreshold": -40
+        }, {
+            "productId": 18,
+            "immediateThreshold": -30,
+            "candidateThreshold": -40
+        }, {
+            "productId": 20,
+            "immediateThreshold": -30,
+            "candidateThreshold": -40
+        }, {
+            "productId": 28,
+            "immediateThreshold": -30,
+            "candidateThreshold": -40
+        }, {
+            "productId": 45,
+            "immediateThreshold": -30,
+            "candidateThreshold": -40
+        }, {
+            "productId": 48,
+            "immediateThreshold": -30,
+            "candidateThreshold": -40
+        }, {
+            "productId": 49,
+            "immediateThreshold": -30,
+            "candidateThreshold": -40
+        }, {
+            "productId": 50,
+            "immediateThreshold": -30,
+            "candidateThreshold": -40
+        }, {
+            "productId": 51,
+            "immediateThreshold": -30,
+            "candidateThreshold": -40
+        }, {
+            "productId": 52,
+            "immediateThreshold": -30,
+            "candidateThreshold": -40
+        }, {
+            "productId": 69,
+            "immediateThreshold": -45,
+            "candidateThreshold": -55
+        }, {
+            "productId": 70,
+            "immediateThreshold": -45,
+            "candidateThreshold": -55
+        }, {
+            "productId": 71,
+            "immediateThreshold": -45,
+            "candidateThreshold": -55
+        }, {
+            "productId": 72,
+            "immediateThreshold": -45,
+            "candidateThreshold": -55
+        }, {
+            "productId": 73,
+            "immediateThreshold": -45,
+            "candidateThreshold": -55
+        }, {
+            "productId": 74,
+            "immediateThreshold": -45,
+            "candidateThreshold": -55
+        }, {
+            "productId": 75,
+            "immediateThreshold": -45,
+            "candidateThreshold": -55
+        }, {
+            "productId": 76,
+            "immediateThreshold": -45,
+            "candidateThreshold": -55
+        }, {
+            "productId": 77,
+            "immediateThreshold": -45,
+            "candidateThreshold": -55
+        }, {
+            "productId": 103,
+            "immediateThreshold": -45,
+            "candidateThreshold": -55
+        }]
+    },
+    "item-modes": {
+        "items": [{
+            "productId": 110,
+            "id": 2,
+            "name": "Boooo",
+            "setupId": 1,
+            "interfaceId": 33,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 6,
+                "values": [120]
+            }, {
+                "wirelessFeatureId": 10,
+                "values": [40, 100, 100, 2]
+            }, {
+                "wirelessFeatureId": 25,
+                "values": [46, 39]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [100]
+            }]
+        }, {
+            "productId": 110,
+            "id": 1,
+            "name": "Lalalala",
+            "setupId": 1,
+            "interfaceId": 33,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 11,
+                "values": [55, 4]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [100]
+            }]
+        }, {
+            "productId": 103,
+            "id": 1,
+            "name": "Hsbdb",
+            "setupId": 2,
+            "interfaceId": 32,
+            "permutationId": 10005,
+            "features": [{
+                "wirelessFeatureId": 8,
+                "values": [100]
+            }, {
+                "wirelessFeatureId": 29,
+                "values": [70, 100, 100, 50, 10, 50, -50, 2]
+            }]
+        }, {
+            "productId": 82,
+            "id": 1,
+            "name": "Gtfh",
+            "setupId": 1,
+            "interfaceId": 21,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 8,
+                "values": [20]
+            }, {
+                "wirelessFeatureId": 15,
+                "values": [85, 7, 100, 7]
+            }, {
+                "wirelessFeatureId": 31,
+                "values": [6160, 10, 0]
+            }]
+        }, {
+            "productId": 76,
+            "id": 4,
+            "name": "Fufu",
+            "setupId": 1,
+            "interfaceId": 16,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 4,
+                "values": [100, 15000]
+            }, {
+                "wirelessFeatureId": 11,
+                "values": [27, 4]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [100]
+            }]
+        }, {
+            "productId": 76,
+            "id": 3,
+            "name": "Hdjsjxjssk",
+            "setupId": 1,
+            "interfaceId": 16,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 4,
+                "values": [100, 15000]
+            }, {
+                "wirelessFeatureId": 11,
+                "values": [27, 4]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [100]
+            }]
+        }, {
+            "productId": 76,
+            "id": 2,
+            "name": "Gfetg",
+            "setupId": 1,
+            "interfaceId": 16,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 4,
+                "values": [100, 15000]
+            }, {
+                "wirelessFeatureId": 11,
+                "values": [66, 4]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [100]
+            }]
+        }, {
+            "productId": 76,
+            "id": 1,
+            "name": "Gfvv",
+            "setupId": 1,
+            "interfaceId": 16,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 4,
+                "values": [47, 15000]
+            }, {
+                "wirelessFeatureId": 11,
+                "values": [29, 4]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [587]
+            }]
+        }, {
+            "productId": 75,
+            "id": 4,
+            "name": "Gfd",
+            "setupId": 1,
+            "interfaceId": 16,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 11,
+                "values": [27, 4]
+            }, {
+                "wirelessFeatureId": 4,
+                "values": [100, 15000]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [100]
+            }, {
+                "wirelessFeatureId": 10,
+                "values": [57, 100, 100, 2]
+            }]
+        }, {
+            "productId": 75,
+            "id": 3,
+            "name": "Vhff",
+            "setupId": 1,
+            "interfaceId": 16,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 11,
+                "values": [27, 4]
+            }, {
+                "wirelessFeatureId": 4,
+                "values": [100, 15000]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [100]
+            }, {
+                "wirelessFeatureId": 10,
+                "values": [63, 100, 100, 2]
+            }]
+        }, {
+            "productId": 75,
+            "id": 2,
+            "name": "Bla",
+            "setupId": 1,
+            "interfaceId": 16,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 11,
+                "values": [27, 4]
+            }, {
+                "wirelessFeatureId": 4,
+                "values": [100, 15000]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [100]
+            }, {
+                "wirelessFeatureId": 10,
+                "values": [69, 100, 100, 2]
+            }]
+        }, {
+            "productId": 75,
+            "id": 1,
+            "name": "Blah",
+            "setupId": 1,
+            "interfaceId": 16,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 11,
+                "values": [27, 4]
+            }, {
+                "wirelessFeatureId": 4,
+                "values": [100, 15000]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [100]
+            }]
+        }, {
+            "productId": 74,
+            "id": 4,
+            "name": "Screw In Concrete Anchor",
+            "setupId": 3,
+            "interfaceId": 0,
+            "permutationId": 10001,
+            "features": [{
+                "wirelessFeatureId": 4,
+                "values": [100, 10000]
+            }, {
+                "wirelessFeatureId": 6,
+                "values": [15]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [100]
+            }, {
+                "wirelessFeatureId": 16,
+                "values": [96, 30, 5, 4]
+            }]
+        }, {
+            "productId": 74,
+            "id": 3,
+            "name": "Low",
+            "setupId": 1,
+            "interfaceId": 0,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 4,
+                "values": [100, 10000]
+            }, {
+                "wirelessFeatureId": 6,
+                "values": [10]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [100]
+            }, {
+                "wirelessFeatureId": 10,
+                "values": [37, 100, 100, 2]
+            }, {
+                "wirelessFeatureId": 25,
+                "values": [34, 39]
+            }]
+        }, {
+            "productId": 74,
+            "id": 2,
+            "name": "High",
+            "setupId": 1,
+            "interfaceId": 0,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 4,
+                "values": [100, 10000]
+            }, {
+                "wirelessFeatureId": 6,
+                "values": [200]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [100]
+            }, {
+                "wirelessFeatureId": 10,
+                "values": [100, 100, 100, 2]
+            }, {
+                "wirelessFeatureId": 25,
+                "values": [100, 70]
+            }]
+        }, {
+            "productId": 74,
+            "id": 1,
+            "name": "Custom",
+            "setupId": 1,
+            "interfaceId": 0,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 4,
+                "values": [100, 10000]
+            }, {
+                "wirelessFeatureId": 6,
+                "values": [140]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [100]
+            }, {
+                "wirelessFeatureId": 10,
+                "values": [34, 100, 100, 2]
+            }, {
+                "wirelessFeatureId": 25,
+                "values": [64, 53]
+            }]
+        }, {
+            "productId": 72,
+            "id": 7,
+            "name": "testing 5",
+            "setupId": 1,
+            "interfaceId": 37,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 33,
+                "values": [100, 100, 100, 38, 0]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [332]
+            }]
+        }, {
+            "productId": 72,
+            "id": 6,
+            "name": "Mode 4",
+            "setupId": 1,
+            "interfaceId": 37,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 33,
+                "values": [100, 100, 100, 100, 0]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [267]
+            }]
+        }, {
+            "productId": 72,
+            "id": 5,
+            "name": "Mode 3",
+            "setupId": 1,
+            "interfaceId": 37,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 33,
+                "values": [100, 83, 91, 83, 0]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [267]
+            }]
+        }, {
+            "productId": 72,
+            "id": 3,
+            "name": "Mode 2",
+            "setupId": 1,
+            "interfaceId": 37,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 33,
+                "values": [100, 42, 71, 33, 0]
+            }, {
+                "wirelessFeatureId": 8,
+                "values": [449]
+            }]
+        }, {
+            "productId": 72,
+            "id": 1,
+            "name": "2865-20 Mode",
+            "setupId": 1,
+            "interfaceId": 37,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 8,
+                "values": [267]
+            }, {
+                "wirelessFeatureId": 11,
+                "values": [83, 4]
+            }]
+        }, {
+            "productId": 74,
+            "id": 5,
+            "name": "Sample",
+            "setupId": 1,
+            "interfaceId": 16,
+            "permutationId": 0,
+            "features": [{
+                "wirelessFeatureId": 8,
+                "values": [100]
+            }, {
+                "wirelessFeatureId": 4,
+                "values": [100, 15000]
+            }, {
+                "wirelessFeatureId": 25,
+                "values": [73, 57]
+            }, {
+                "wirelessFeatureId": 10,
+                "values": [34, 100, 100, 2]
+            }, {
+                "wirelessFeatureId": 6,
+                "values": [140]
+            }]
+        }]
+    },
+    "config/features": {
+        "inventorybarcode": true,
+        "transfers": false,
+        "barcodescan": false,
+        "placestransfer": true,
+        "bestlocation": false,
+        "geofence": true,
+        "activitytracking": true,
+        "places": true
+    },
+    "accounts/me": {
+        "roles": [],
+        "accountProfile": null,
+        "email": "invdemo@milwaukeetool.com",
+        "password": null,
+        "firstName": "S",
+        "lastName": "M",
+        "occupation": "Electrician",
+        "optInForCommunications": false,
+        "title": "MKE Tool",
+        "address": null,
+        "address2": null,
+        "city": null,
+        "state": null,
+        "zip": null,
+        "country": "US",
+        "phone": null,
+        "cellPhone": null,
+        "fax": null,
+        "emailConfirmed": false,
+        "companyName": "MKE Tool Co.",
+        "companyAddressOne": "123 Main St. ",
+        "companyAddressTwo": null,
+        "companyCity": "Milwaukee",
+        "companyState": "WI",
+        "companyPostalCode": "53210",
+        "companyCountry": "US",
+        "companyPhoneNumber": "414-414-4141",
+        "companyFaxNumber": null,
+        "companyLogoUrl": null
+    },
+    "config": {
+        "currentApiVersion": "3.0.0",
+        "updateRequired": false,
+        "clientVersionRequired": null,
+        "getItems": false,
+        "title": null,
+        "message": null,
+        "key": "vlNhVqF6uI9TcFA1lU5jpamhpIjkzxfla6UflhFc",
+        "token": "uWAzNk6gZ9+tk0WGhzYN8g==",
+        "scheduledMaintenance": {
+            "id": 33,
+            "start": "2018-04-12T12:28:25.683",
+            "end": "2018-04-12T12:38:25.683",
+            "displayMessageStart": "2018-04-12T12:28:25.683",
+            "displayMessageEnd": "2018-04-12T12:38:25.683",
+            "scheduledMaintenanceMessage": "Scheduled maintenance is planned from {startDate} to {endDate}. Some actions may be unavailable during this time.",
+            "duringMaintenanceMessage": "We are currently performing maintenance tasks. Some actions may be unavailable during this time.",
+            "maintenanceHeader": "Scheduled Maintenance",
+            "inMaintenanceMode": false
+        },
+        "overrideMessage": null,
+        "overrideMessageHeader": null,
+        "beaconIds": ["FACE"]
+    },
+    "static": {
+        "statuses": [{
+            "statusName": "Available",
+            "statusId": 0
+        }, {
+            "statusName": "Missing",
+            "statusId": 1
+        }, {
+            "statusName": "Damaged",
+            "statusId": 2
+        }, {
+            "statusName": "Retired",
+            "statusId": 3
+        }, {
+            "statusName": "In Use",
+            "statusId": 4
+        }, {
+            "statusName": "Service",
+            "statusId": 5
+        }, {
+            "statusName": "Stolen",
+            "statusId": 6
+        }],
+        "placeTypes": [{
+            "placeTypeName": "Unassigned",
+            "placeTypeId": 1
+        }, {
+            "placeTypeName": "Project/Job",
+            "placeTypeId": 2
+        }, {
+            "placeTypeName": "Home Base",
+            "placeTypeId": 3
+        }, {
+            "placeTypeName": "Vehicle",
+            "placeTypeId": 4
+        }],
+        "alertFrequencies": [{
+            "alertFrequencyId": 0,
+            "alertFrequencyName": "Never"
+        }, {
+            "alertFrequencyId": 1,
+            "alertFrequencyName": "Monthly"
+        }, {
+            "alertFrequencyId": 2,
+            "alertFrequencyName": "Quarterly"
+        }, {
+            "alertFrequencyId": 3,
+            "alertFrequencyName": "Semiannually"
+        }, {
+            "alertFrequencyId": 4,
+            "alertFrequencyName": "Annually"
+        }]
+    }
+}

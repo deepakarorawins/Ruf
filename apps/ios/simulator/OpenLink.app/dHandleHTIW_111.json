@@ -1,0 +1,510 @@
+{
+  "productId": 111,
+  "modelNumber": "2868-20",
+  "featureSetVersion": 1,
+  "isDefault": true,
+  "minimumMemoryMapVersion": "05",
+  "toolManagementId": 0,
+  "eventsPerServicePeriod": 0,
+  "features": [
+    {
+      "featureId": 1110101,
+      "isEnabledByDefault": true,
+      "name": "Variable Bounded PWM",
+      "wirelessFeatureId": "000B",
+      "staticSettings": [
+        {
+          "name": "Min Speed (RPM)",
+          "bytes": [
+            3,
+            4
+          ],
+          "value": 10
+        }
+      ],
+      "settings": [
+        {
+          "name": "Max Speed (RPM)",
+          "bytes": [
+            1,
+            2
+          ],
+          "uiLow": "360",
+          "uiHigh": "1200",
+          "low": 30,
+          "high": 100,
+          "increment": 50,
+          "default": 36,
+          "alternateSettings": {}
+        }
+      ]
+    },
+    {
+      "featureId": 1110102,
+      "isEnabledByDefault": false,
+      "name": "Impact Counting with Shutdown (Precision Mode)",
+      "wirelessFeatureId": "0006",
+      "staticSettings": [],
+      "settings": [
+        {
+          "name": "Torque Level",
+          "bytes": [
+            1,
+            2
+          ],
+          "uiLow": "1",
+          "uiHigh": "20",
+          "low": 1,
+          "high": 200,
+          "increment": 1,
+          "default": 200,
+          "alternateSettings": {
+            "blowCountData": "20,40,60,80,100,120,140,160,180,200,220,240,260,280,300,320,340,360,380,400"
+          }
+        }
+      ]
+    },
+    {
+      "featureId": 1110103,
+      "isEnabledByDefault": true,
+      "name": "Soft Start Settings",
+      "wirelessFeatureId": "0008",
+      "staticSettings": [],
+      "settings": [
+        {
+          "name": "Trigger Ramp Up",
+          "bytes": [
+            1,
+            2
+          ],
+          "uiLow": "Shorter",
+          "uiHigh": "Longer",
+          "low": 100,
+          "high": 1000,
+          "increment": 250,
+          "default": 100,
+          "alternateSettings": {}
+        }
+      ]
+    },
+    {
+      "featureId": 1110104,
+      "isEnabledByDefault": true,
+      "name": "GLOBAL Worklight Settings",
+      "wirelessFeatureId": "001E",
+      "wirelessFeatureIdInteger": 30,
+      "staticSettings": [],
+      "settings": [
+        {
+          "name": "Work Light Brightness",
+          "bytes": [
+            1,
+            2
+          ],
+          "uiLow": "0%",
+          "uiHigh": "100%",
+          "low": 0,
+          "high": 10,
+          "increment": 1,
+          "default": 10,
+          "alternateSettings": {}
+        },
+        {
+          "name": "Work Light Duration",
+          "bytes": [
+            3,
+            4
+          ],
+          "uiLow": "0",
+          "uiHigh": "30 seconds",
+          "low": 1,
+          "high": 30000,
+          "increment": 1000,
+          "default": 15000,
+          "alternateSettings": {
+            "always-on-duration": "65535",
+            "times": "15000,30000,60000,65535"
+          }
+        }
+      ]
+    },
+    {
+      "featureId": 1110109,
+      "isEnabledByDefault": false,
+      "name": "Adaptive Output Control (use for max speed when precision mode is on)",
+      "wirelessFeatureId": "0019",
+      "staticSettings": [],
+      "settings": [
+        {
+          "name": "MaxPwmWhileNotImpacting_Percent",
+          "bytes": [
+            1,
+            2
+          ],
+          "uiLow": "360",
+          "uiHigh": "1200",
+          "low": 30,
+          "high": 100,
+          "increment": 50,
+          "default": 36,
+          "alternateSettings": {}
+        },
+        {
+          "name": "PwmWhileImpacting_Percent",
+          "bytes": [
+            3,
+            4
+          ],
+          "uiLow": "NA",
+          "uiHigh": "NA",
+          "low": 30,
+          "high": 100,
+          "increment": 1,
+          "default": 50,
+          "alternateSettings": {}
+        }
+      ]
+    },
+    {
+      "featureId": 1110111,
+      "isEnabledByDefault": true,
+      "name": "Bolt Removal (Reverse) Speed",
+      "wirelessFeatureId": "002E",
+      "staticSettings": [
+        {
+          "name": "PwmWhenImpacting_Percent",
+          "bytes": [
+            3,
+            4
+          ],
+          "value": 100
+        }
+      ],
+      "settings": [
+        {
+          "name": "RemovalSpeed(PwmWhenNotLoaded_Percent)",
+          "bytes": [
+            1,
+            2
+          ],
+          "uiLow": "360",
+          "uiHigh": "1200",
+          "low": 30,
+          "high": 100,
+          "increment": 50,
+          "default": 100,
+          "alternateSettings": {}
+        }
+      ]
+    }
+  ],
+  "setups": [
+    {
+      "name": "Global Setup",
+      "setupId": 0,
+      "interfaceId": 34,
+      "primarySetupFeatures": [
+        1110104
+      ],
+      "optionalSetupFeatures": [],
+      "supportedMeasures": 0,
+      "permutationDataId": null,
+      "minimumClientVersion": 7
+    },
+    {
+      "name": "Custom Drive Control",
+      "setupId": 1,
+      "interfaceId": 42,
+      "primarySetupFeatures": [
+        1110101,
+        1110109,
+        1110111,
+        1110102,
+        1110103
+      ],
+      "optionalSetupFeatures": [],
+      "supportedMeasures": 0,
+      "permutationDataId": null,
+      "minimumClientVersion": 2
+    }
+  ],
+  "defaultModeSetups": [
+    {
+      "modeAddress": "71CD",
+      "interfaceId": 34,
+      "setupId": 0,
+      "name": "Global Preset",
+      "setupData": null,
+      "features": [
+        {
+          "featureId": 1110104,
+          "wirelessFeatureId": "001E",
+          "settings": [
+            {
+              "bytes": [
+                1,
+                2
+              ],
+              "value": 10
+            },
+            {
+              "bytes": [
+                3,
+                4
+              ],
+              "value": 15000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modeAddress": "7001",
+      "interfaceId": 42,
+      "setupId": 1,
+      "name": "Preset 1",
+      "setupData": null,
+      "features": [
+        {
+          "featureId": 1110103,
+          "wirelessFeatureId": "0008",
+          "settings": [
+            {
+              "bytes": [
+                1,
+                2
+              ],
+              "value": 100
+            }
+          ]
+        },
+        {
+          "featureId": 1110101,
+          "wirelessFeatureId": "000B",
+          "settings": [
+            {
+              "bytes": [
+                1,
+                2
+              ],
+              "value": 50
+            },
+            {
+              "bytes": [
+                3,
+                4
+              ],
+              "value": 10
+            }
+          ]
+        },
+        {
+          "featureId": 1110111,
+          "wirelessFeatureId": "002E",
+          "settings": [
+            {
+              "bytes": [
+                1,
+                2
+              ],
+              "value": 100
+            },
+            {
+              "bytes": [
+                3,
+                4
+              ],
+              "value": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modeAddress": "705D",
+      "interfaceId": 42,
+      "setupId": 1,
+      "name": "Preset 2",
+      "setupData": null,
+      "features": [
+        {
+          "featureId": 1110103,
+          "wirelessFeatureId": "0008",
+          "settings": [
+            {
+              "bytes": [
+                1,
+                2
+              ],
+              "value": 100
+            }
+          ]
+        },
+        {
+          "featureId": 1110101,
+          "wirelessFeatureId": "000B",
+          "settings": [
+            {
+              "bytes": [
+                1,
+                2
+              ],
+              "value": 60
+            },
+            {
+              "bytes": [
+                3,
+                4
+              ],
+              "value": 10
+            }
+          ]
+        },
+        {
+          "featureId": 1110111,
+          "wirelessFeatureId": "002E",
+          "settings": [
+            {
+              "bytes": [
+                1,
+                2
+              ],
+              "value": 100
+            },
+            {
+              "bytes": [
+                3,
+                4
+              ],
+              "value": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modeAddress": "70B9",
+      "interfaceId": 42,
+      "setupId": 1,
+      "name": "Preset 3",
+      "setupData": null,
+      "features": [
+        {
+          "featureId": 1110103,
+          "wirelessFeatureId": "0008",
+          "settings": [
+            {
+              "bytes": [
+                1,
+                2
+              ],
+              "value": 100
+            }
+          ]
+        },
+        {
+          "featureId": 1110101,
+          "wirelessFeatureId": "000B",
+          "settings": [
+            {
+              "bytes": [
+                1,
+                2
+              ],
+              "value": 75
+            },
+            {
+              "bytes": [
+                3,
+                4
+              ],
+              "value": 10
+            }
+          ]
+        },
+        {
+          "featureId": 1110111,
+          "wirelessFeatureId": "002E",
+          "settings": [
+            {
+              "bytes": [
+                1,
+                2
+              ],
+              "value": 100
+            },
+            {
+              "bytes": [
+                3,
+                4
+              ],
+              "value": 100
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "modeAddress": "7115",
+      "interfaceId": 42,
+      "setupId": 1,
+      "name": "Preset 4",
+      "setupData": null,
+      "features": [
+        {
+          "featureId": 1110103,
+          "wirelessFeatureId": "0008",
+          "settings": [
+            {
+              "bytes": [
+                1,
+                2
+              ],
+              "value": 100
+            }
+          ]
+        },
+        {
+          "featureId": 1110101,
+          "wirelessFeatureId": "000B",
+          "settings": [
+            {
+              "bytes": [
+                1,
+                2
+              ],
+              "value": 100
+            },
+            {
+              "bytes": [
+                3,
+                4
+              ],
+              "value": 10
+            }
+          ]
+        },
+        {
+          "featureId": 1110111,
+          "wirelessFeatureId": "002E",
+          "settings": [
+            {
+              "bytes": [
+                1,
+                2
+              ],
+              "value": 100
+            },
+            {
+              "bytes": [
+                3,
+                4
+              ],
+              "value": 100
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

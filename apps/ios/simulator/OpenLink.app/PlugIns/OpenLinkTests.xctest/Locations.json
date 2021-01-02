@@ -1,0 +1,50 @@
+[
+  {
+  "comment": "Initial Location (old but very accurate)",
+  "expectedResult": "2018-01-01T05:00:01Z",
+  "locations": [
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 5.0, "timestamp": "2018-01-01T05:00:01Z" },
+                ]
+  },
+  {
+  "comment": "2 inaccurate locations, but much newer than current",
+  "expectedResult": "2018-01-01T06:00:01Z",
+  "locations": [
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 50.0, "timestamp": "2018-01-01T06:00:01Z" },
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 65.0, "timestamp": "2018-01-01T06:00:02Z" },
+                ]
+  },
+  {
+  "comment": "Decreasing accuracy",
+  "expectedResult": "2018-01-01T07:00:10Z",
+  "locations": [
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 10.0, "timestamp": "2018-01-01T07:00:00Z" },
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 15.0, "timestamp": "2018-01-01T07:00:10Z" },
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 25.0, "timestamp": "2018-01-01T07:00:11Z" },
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 35.0, "timestamp": "2018-01-01T07:00:12Z" },
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 45.0, "timestamp": "2018-01-01T07:00:13Z" },
+                ]
+  },
+  {
+  "comment": "Increasing accuracy",
+  "expectedResult": "2018-01-01T08:00:40Z",
+  "locations": [
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 60.0, "timestamp": "2018-01-01T08:00:00Z" },
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 50.0, "timestamp": "2018-01-01T08:00:10Z" },
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 40.0, "timestamp": "2018-01-01T08:00:20Z" },
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 30.0, "timestamp": "2018-01-01T08:00:30Z" },
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 20.0, "timestamp": "2018-01-01T08:00:40Z" },
+                ]
+  },
+  {
+  "comment": "Out of sequence",
+  "expectedResult": "2018-01-01T09:05:00Z",
+  "locations": [
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 123.0, "timestamp": "2018-01-01T09:00:00Z" },
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 50.0, "timestamp": "2018-01-01T09:05:00Z" },
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 240.0, "timestamp": "2018-01-01T09:02:00Z" },
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 210.0, "timestamp": "2018-01-01T09:04:00Z" },
+                { "lat": 42.961746, "lon": -87.960976, "hAcc": 200.0, "timestamp": "2018-01-01T09:05:01Z" },
+                ]
+  },
+]
