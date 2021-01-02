@@ -39,18 +39,18 @@ public class LoginPage extends BasePage {
 
     public LoginPage enterEmail(String emailAddress) throws InterruptedException {
         clear(txtEmailAddress);
-        sendKeys(txtEmailAddress, emailAddress, "login with " + emailAddress);
+        sendKeys(txtEmailAddress, "Email Address", emailAddress);
         return this;
     }
 
     public LoginPage enterPassword(String password) {
         clear(txtPassword);
-        sendKeys(txtPassword, password, "password is " + password);
+        sendKeys(txtPassword, "Password", password);
         return this;
     }
 
     public InventoryPage clickLoginBtn() {
-        click(btnSignIn, "Clicked login button");
+        click(btnSignIn, "Sign In");
         return new InventoryPage();
     }
 

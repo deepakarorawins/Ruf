@@ -1,5 +1,6 @@
 package pages;
 
+import com.aventstack.extentreports.Status;
 import io.appium.java_client.*;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
 import org.openqa.selenium.By;
@@ -10,6 +11,7 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import reports.ExtentReport;
 import utils.DriverManager;
 import utils.GlobalParams;
 import utils.TestUtils;
@@ -49,16 +51,19 @@ public class BasePage {
         e.click();
     }
 
-    public void click(MobileElement e, String msg) {
+    public void click(MobileElement e, String FieldName) {
         waitForVisibility(e);
-        utils.log().info(msg);
         e.click();
+        utils.log().info("Pressed: "+FieldName);
+        ExtentReport.getTest().log(Status.INFO, "Pressed: "+FieldName);
     }
 
-    public void click(By e, String msg) {
+    public void click(By e, String FieldName) {
         waitForVisibility(e);
-        utils.log().info(msg);
         driver.findElement(e).click();
+        utils.log().info("Pressed: "+FieldName);
+        ExtentReport.getTest().log(Status.INFO, "Pressed: "+FieldName);
+
     }
 
     public void sendKeys(MobileElement e, String txt) {
@@ -66,10 +71,11 @@ public class BasePage {
         e.sendKeys(txt);
     }
 
-    public void sendKeys(MobileElement e, String txt, String msg) {
+    public void sendKeys(MobileElement e, String FieldName, String txt ) {
         waitForVisibility(e);
-        utils.log().info(msg);
         e.sendKeys(txt);
+        utils.log().info("Entered "+FieldName+ " as: "+ txt);
+        ExtentReport.getTest().log(Status.INFO, "Entered "+FieldName+ "as: "+ txt);
     }
 
     public String getAttribute(MobileElement e, String attribute) {

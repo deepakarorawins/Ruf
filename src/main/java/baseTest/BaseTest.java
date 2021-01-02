@@ -5,6 +5,7 @@ import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.apache.logging.log4j.ThreadContext;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
+import reports.ExtentReport;
 import utils.*;
 
 import java.io.File;
@@ -131,6 +132,8 @@ public class BaseTest {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        ExtentReport.getTest().getExtent().flush();
     }
 
 
