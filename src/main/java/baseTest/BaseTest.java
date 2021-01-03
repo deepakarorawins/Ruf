@@ -14,6 +14,9 @@ import java.util.HashMap;
 import java.util.Properties;
 //mvn test -DplatformName=ios -DdeviceName=iPhone6s -Dmaven.surefire.debug
 //mvn test -DplatformName=ios -DdeviceName=iPhone6s
+//mvn test -DsuiteXmlFile=testng.xml
+//mvn test -Dtest=Runner
+//mvn test -DfailIfNoTests=false -Dtest=Runner
 
 @Listeners(listeners.DeeListeners.class)
 public class BaseTest {

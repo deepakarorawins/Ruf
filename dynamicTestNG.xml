@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="baseline" parallel="tests">
+  <listeners>
+    <listener class-name="listeners.DeeListeners"/>
+  </listeners>
+  <test thread-count="5" name="iphone8" parallel="tests">
+    <parameter name="webkitDebugProxyPort" value="11004"/>
+    <parameter name="isRealDevice" value="false"/>
+    <parameter name="platformName" value="ios"/>
+    <parameter name="udid" value="57D62164-6520-40F0-90D2-213F27B77F4F"/>
+    <parameter name="deviceName" value="iSim8FromTestNGParam"/>
+    <parameter name="wdaLocalPort" value="10004"/>
+    <classes>
+      <class name="iosTests.LoginTest"/>
+    </classes>
+  </test> <!-- iphone8 -->
+</suite> <!-- baseline -->
