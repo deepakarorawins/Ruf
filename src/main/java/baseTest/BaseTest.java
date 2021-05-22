@@ -1,6 +1,7 @@
 package baseTest;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.InteractsWithApps;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import org.apache.logging.log4j.ThreadContext;
 import org.testng.ITestResult;
@@ -43,7 +44,18 @@ public class BaseTest {
 
     @BeforeSuite
     public void initialize_suite() {
-        System.out.println("@BeforeSuite");
+        utils.log().info("@BeforeSuite");
+        utils.log().info("Region: "+"To be worked");
+        utils.log().info("Language: "+"To be worked");
+        utils.log().info("Locale: "+"To be worked");
+        utils.log().info("Platform: "+platform);
+        utils.log().info("IsRealDevice: "+"To be worked");
+        utils.log().info("DeviceName: "+deviceName);
+        utils.log().info("Udid: "+"To be worked");
+        utils.log().info("IsRealDevice: "+"To be worked");
+        utils.log().info("IsRealDevice: "+"To be worked");
+        utils.log().info("IsRealDevice: "+"To be worked");
+
 
     }
 
@@ -97,33 +109,21 @@ public class BaseTest {
     @BeforeMethod
     public synchronized void beforeMethod() {
         System.out.println("@BeforeMethod");
+        launchApp();
+        //activateApp();
         String bundleId = props.getProperty("iOSBundleId");
-
-        //String bundleId = props.getProperty("iOSBundleId");
-        if (this.driver.get().isAppInstalled(bundleId)) {
-            this.driver.get().removeApp(bundleId);
-        }
-
-        if (!this.driver.get().isAppInstalled(bundleId)) {
-            if (params.getIsRealDevice().equalsIgnoreCase("true")) {
-                String iOSIpaUrl = System.getProperty("user.dir") + props.getProperty("iOSIpaLocation");
-                utils.log().info("ipaUrl is" + iOSIpaUrl);
-                this.driver.get().installApp(iOSIpaUrl);
-            } else if (params.getIsRealDevice().equalsIgnoreCase("false")) {
-                String iOSAppUrl = System.getProperty("user.dir") + props.getProperty("iOSAppLocation");
-                utils.log().info("appUrl is" + iOSAppUrl);
-                this.driver.get().installApp(iOSAppUrl);
-            }
-        }
+        //uninstall_install_App();
         this.driver.get().activateApp(bundleId);
 
         new VideoManager().startRecording();
     }
 
+
+
     @AfterMethod
     public synchronized void afterMethod(ITestResult result) {
         System.out.println("@AfterMethod");
-
+        closeApp();
 
         String dirPath = "videos" + File.separator + params.getPlatformName() + "_" + params.getDeviceName()
                 + File.separator + utils.dateTime() + File.separator + result.getTestClass().getRealClass().getSimpleName();
@@ -162,5 +162,80 @@ public class BaseTest {
     public void quit_suite() {
         System.out.println("@AfterSuite");
     }
+
+    public void uninstallApp(){
+        String bundleId = props.getProperty("iOSBundleId");
+
+        //String bundleId = props.getProperty("iOSBundleId");
+        if (this.driver.get().isAppInstalled(bundleId)) {
+            this.driver.get().removeApp(bundleId);
+        }
+    }
+
+    public void installApp(){
+        String bundleId = props.getProperty("iOSBundleId");
+
+        if (!this.driver.get().isAppInstalled(bundleId)) {
+            if (params.getIsRealDevice().equalsIgnoreCase("true")) {
+                String iOSIpaUrl = System.getProperty("user.dir") + props.getProperty("iOSIpaLocation");
+                utils.log().info("ipaUrl is" + iOSIpaUrl);
+                this.driver.get().installApp(iOSIpaUrl);
+            } else if (params.getIsRealDevice().equalsIgnoreCase("false")) {
+                String iOSAppUrl = System.getProperty("user.dir") + props.getProperty("iOSAppLocation");
+                utils.log().info("appUrl is" + iOSAppUrl);
+                this.driver.get().installApp(iOSAppUrl);
+            }
+        }
+        this.driver.get().activateApp(bundleId);
+    }
+
+    public void uninstall_install_App(){
+        String bundleId = props.getProperty("iOSBundleId");
+
+        //String bundleId = props.getProperty("iOSBundleId");
+        if (this.driver.get().isAppInstalled(bundleId)) {
+            this.driver.get().removeApp(bundleId);
+        }
+
+        if (!this.driver.get().isAppInstalled(bundleId)) {
+            if (params.getIsRealDevice().equalsIgnoreCase("true")) {
+                String iOSIpaUrl = System.getProperty("user.dir") + props.getProperty("iOSIpaLocation");
+                utils.log().info("ipaUrl is" + iOSIpaUrl);
+                this.driver.get().installApp(iOSIpaUrl);
+            } else if (params.getIsRealDevice().equalsIgnoreCase("false")) {
+                String iOSAppUrl = System.getProperty("user.dir") + props.getProperty("iOSAppLocation");
+                utils.log().info("appUrl is" + iOSAppUrl);
+                this.driver.get().installApp(iOSAppUrl);
+            }
+        }
+        this.driver.get().activateApp(bundleId);
+    }
+
+
+
+    public void closeApplication() {
+        driver.get().executeScript("client:client.applicationClose('"+props.getProperty("iOSBundleId")+"')");
+    }
+
+    public void terminateApp() {
+        ((InteractsWithApps) driver.get()).terminateApp(props.getProperty("iOSBundleId"));
+    }
+
+    public void activateApp() {
+        ((InteractsWithApps) driver.get()).activateApp(props.getProperty("iOSBundleId"));
+    }
+
+    public void resetApp() {
+        ((InteractsWithApps) driver.get()).removeApp(props.getProperty("iOSBundleId"));
+    }
+
+    public void launchApp() {
+        ((InteractsWithApps) driver.get()).launchApp();
+    }
+
+    public void closeApp() {
+        ((InteractsWithApps) driver.get()).closeApp();
+    }
+
 
 }

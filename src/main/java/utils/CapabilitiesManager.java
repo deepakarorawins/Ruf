@@ -55,6 +55,9 @@ public class CapabilitiesManager {
                     caps.setCapability("wdaLocalPort", params.getWdaLocalPort());
                     caps.setCapability("webkitDebugProxyPort", params.getWebkitDebugProxyPort());
                     //caps.setCapability("app", iOSIpaUrl);
+                    caps.setCapability(MobileCapabilityType.FULL_RESET, "true");
+                    caps.setCapability(MobileCapabilityType.NO_RESET, "false");
+
 
                     break;
             }

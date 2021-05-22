@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">-->
 <suite name="Suite" parallel="tests">
-    <test name="iPhone6">
+   <test name="iPhone6">
         <listeners>
             <listener class-name="listeners.DeeListeners"/>
         </listeners>
@@ -15,7 +15,26 @@
             <class name="iosTests.LoginTest"/>
         </classes>
     </test>
-    <test name="iSim8">
+
+    <!-- <test name="iPhoneX">
+        <listeners>
+            <listener class-name="listeners.DeeListeners"/>
+        </listeners>
+        <parameter name="environment" value="stage"/>
+        <parameter name="language" value="en-GB"/>
+        <parameter name="locale" value="en-GB"/>
+        <parameter name="isRealDevice" value="true"/>
+        <parameter name="platformName" value="ios"/>
+        <parameter name="deviceName" value="iPhoneXFromTestNGParam"/>
+        <parameter name="udid" value="2e5a94780943a089d14ce4f47f056e8c505ca4c4"/>
+        <parameter name="wdaLocalPort" value="10004" />
+        <parameter name="webkitDebugProxyPort" value="11004" />
+        <classes>
+            <class name="iosTests.LoginTest"/>
+        </classes>
+    </test> -->
+
+    <!--<test name="iSim8">
         <listeners>
             <listener class-name="listeners.DeeListeners"/>
         </listeners>
@@ -28,6 +47,6 @@
         <classes>
             <class name="iosTests.LoginTest"/>
         </classes>
-    </test>
+    </test> -->
 
 </suite> <!-- Suite -->

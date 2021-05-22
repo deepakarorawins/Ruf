@@ -29,6 +29,7 @@ public class LoginTest extends BaseTest {
         loginPage.enterEmail("qvmalik@mailinator.com")
                 .enterPassword("miP4cvma")
                 .clickLoginBtn();
-        loginPage.validateAlertTitle("Error Signing In1");
+        loginPage.validateAlertTitle("Error Signing In");
+        loginPage.closeApp();
     }
 }
